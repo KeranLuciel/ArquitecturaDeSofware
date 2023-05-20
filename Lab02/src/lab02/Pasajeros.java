@@ -6,12 +6,15 @@ public class Pasajeros {
     private String direccion;
     private String numeroPasaporte;
     
+//    public Pasajeros(){
+//    }
+    
     public Pasajeros(String nombre, String direccion, String numeroPasaporte) {
         this.nombre = nombre;
         this.direccion = direccion;
         this.numeroPasaporte = numeroPasaporte;
     }
-    
+
     public String getNombre() {
         return nombre;
     }
@@ -43,11 +46,11 @@ public class Pasajeros {
             this.nombre = nombre;
             this.direccion = direccion;
             this.numeroPasaporte = numeroPasaporte;
-            
-            System.out.println("Pasajero registrado correctamente");
+            System.out.println("\nPasajero registrado correctamente");
+            System.out.println("----------------------------------");
         } else {
-            
-            System.out.println("Error: Falta información para registrar el pasajero");
+            System.out.println("\nError: Falta información para registrar el pasajero");
+            System.out.println("----------------------------------------------------");
         }
     }
 
