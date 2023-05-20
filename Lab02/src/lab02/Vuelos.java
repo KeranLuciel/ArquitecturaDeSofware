@@ -45,4 +45,12 @@ public class Vuelos {
     public void setAsientosDisponibles(int asientosDisponibles) {
         this.asientosDisponibles = asientosDisponibles;
     }
+    
+    public void mostrarVuelo(){
+        System.out.println("-----------------------");
+        System.out.println("Origen: " + origen);
+        System.out.println("Destino: " + destino);
+        System.out.println("Fecha: " + fecha);
+        System.out.println("Asientos disponibles " + asientosDisponibles);
+    }
 }
