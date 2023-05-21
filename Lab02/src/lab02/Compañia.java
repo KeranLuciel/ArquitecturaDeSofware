@@ -67,5 +67,14 @@ public final class Compañia {
             return false;
         }
     }
-
+    
+    public List<Vuelos> buscarVuelos(String origen, String destino, String fecha){
+        List<Vuelos> vuelosencontrados = new ArrayList<>();
+        for (Vuelos vuelo: listavuelos){
+            if (vuelo.getOrigen().equalsIgnoreCase(origen) && vuelo.getDestino().equalsIgnoreCase(destino) && vuelo.getFecha().equalsIgnoreCase(fecha)){
+                vuelosencontrados.add(vuelo);
+            }
+        }
+        return vuelosencontrados;
+    }
 }

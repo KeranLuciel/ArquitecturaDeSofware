@@ -2,6 +2,7 @@ package lab02;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Pasajeros {
     
@@ -62,14 +63,26 @@ public class Pasajeros {
         }
     }
     
-    public List<Vuelos> buscarVuelosporDestino(String origen, String destino, String fecha){
-        List<Vuelos> vuelosencontrados = new ArrayList<>();
-        for (Vuelos vuelo: listavuelos.getVuelos()){
-            if (vuelo.getOrigen().equalsIgnoreCase(origen) && vuelo.getDestino().equalsIgnoreCase(destino) && vuelo.getFecha().equalsIgnoreCase(fecha)){
-                vuelosencontrados.add(vuelo);
+    public static void buscarVuelos(Scanner scanner, Compañia compañia){
+        System.out.println("\n=== Busqueda de Vuelos ===");
+        System.out.print("Ingrese el origen de vuelo: " );
+        String origen = scanner.nextLine();
+        System.out.print("Ingrese el destino de vuelo: " );
+        String destino = scanner.nextLine();
+        System.out.print("Ingrese la fecha (dd-mm-yy): " );
+        String fecha = scanner.nextLine();
+        
+        List<Vuelos> vuelosencontrados = compañia.buscarVuelos(origen, destino, fecha);
+        if (vuelosencontrados.isEmpty()){
+            System.out.println("\n-----------------------");
+            System.out.println("No se encontro el vuelo");
+            System.out.println("-----------------------");
+        }
+        else{
+            for (Vuelos vuelo : vuelosencontrados){
+                vuelo.mostrarVuelo();
             }
         }
-        return vuelosencontrados;
     }
     
     public boolean login(String nombre, String numeroPasaporte) {
