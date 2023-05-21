@@ -4,33 +4,12 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Lab02 {
+    
+    Scanner scanner = new Scanner (System.in);
+    Pasajeros pasajero = new Pasajeros();
+    Compañia compañia = new Compañia();
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner (System.in);
-        class Ingreso(){
-            System.out.println("\n>>> BIENVENIDO A NUESTRO SISTEMA DE RESERVAS <<<");
-            System.out.println("Es usted ...?");
-            System.out.println("1. Pasajero");
-            System.out.println("2. Administrador");
-            int opc = scanner.nextInt();
-            switch (opc) {
-                case 1:
-                    System.out.println("");
-                    System.out.println("Que desea hacer?");
-                    System.out.println("1. Registrarte");
-                    System.out.println("2. Ingresar");
-                    break;
-                case 2:
-                    System.out.println("");
-                    System.out.println("Que desea hacer?");
-                    System.out.println("1. Registrarte");
-                    System.out.println("2. Ingresar");
-                    break;
-                default:
-                    throw new AssertionError();
-            }
-        }
-        
         
         System.out.print("\nIngrese su nombre: ");
         String nombre = scanner.nextLine();
@@ -62,5 +41,61 @@ public class Lab02 {
             }
         }
     }
+    
+    public class Inicio {
+        
+        System.out.println("\n>>> BIENVENIDO A NUESTRO SISTEMA DE RESERVAS <<<");
+        System.out.println("¿Quién es usted?");
+        System.out.println("1. Pasajero");
+        System.out.println("2. Administrador");
+        int opc = scanner.nextInt();
+        
+        switch (opc) {
+            case 1:
+                System.out.println("");
+                System.out.println("¿Qué desea hacer?");
+                System.out.println("1. Registrarse");
+                System.out.println("2. Ingresar");
+                int opcionPasajero = scanner.nextInt();
+                
+                switch (opcionPasajero) {
+                    case 1:
+                        pasajero.registrarPasajero(nombre, direccion, numeroPasaporte);
+                        break;
+                    case 2:
+                        
+                        pasajero.login(nombre, numeroPasaporte);
+                        break;
+                    default:
+                        throw new AssertionError();
+                }
+                
+                break;
+                
+            case 2:
+                System.out.println("");
+                System.out.println("¿Qué desea hacer?");
+                System.out.println("1. Registrarse");
+                System.out.println("2. Ingresar");
+                int opcionAdministrador = scanner.nextInt();
+                
+                switch (opcionAdministrador) {
+                    case 1:
+                        compañia.registrarAdmin(nombre, contraseña);
+                        break;
+                    case 2:
+                        compañia.login(nombre, contraseña)
+                        break;
+                    default:
+                        throw new AssertionError();
+                }
+                
+                break;
+                
+            default:
+                throw new AssertionError();
+        }
+    }
+    
 }
     
