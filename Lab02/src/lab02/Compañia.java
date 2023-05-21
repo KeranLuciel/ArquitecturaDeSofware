@@ -9,7 +9,7 @@ public final class Compañia {
     private String contraseña;
     private List<Vuelos> listavuelos;
     
-    public Compañia() {
+    public Compañia(String nombre) {
         this.nombre = nombre;
         this.listavuelos = new ArrayList<>();
         
