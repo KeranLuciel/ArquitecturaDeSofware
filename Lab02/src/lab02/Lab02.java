@@ -16,7 +16,6 @@ public class Lab02 {
         //Agregar vuelos al Itinerarios
         Itinerarios itinerarios = new Itinerarios();
         Vuelos vuelo = new Vuelos();
-        vuelo.mostrarVuelo();
         itinerarios.agregarVuelo(vuelo);
         itinerarios.mostrarItinerario();
     }
