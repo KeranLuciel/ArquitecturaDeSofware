@@ -4,8 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public final class Compañia {
-
+    
     private String nombre;
+    private String contraseña;
     private List<Vuelos> listavuelos;
     
     public Compañia() {
@@ -35,6 +36,36 @@ public final class Compañia {
    
     public void agregarVuelos(Vuelos vuelos){
         listavuelos.add(vuelos);
+    }
+    
+    public void registrarAdmin(String nombre, String contraseña) {
+        
+        if (nombre != null && !nombre.isEmpty() && contraseña != null && !contraseña.isEmpty()) {
+            
+            this.nombre = nombre;
+            this.contraseña = contraseña;
+            System.out.println("\n----------------------------------");
+            System.out.println("Administrador registrado correctamente");
+            System.out.println("----------------------------------");
+        } else {
+            System.out.println("\n----------------------------------------------------");
+            System.out.println("Error: Falta información para registrar al administrador");
+            System.out.println("----------------------------------------------------");
+        }
+    }
+    
+    public boolean login(String nombre, String contraseña) {
+        if (this.nombre.equalsIgnoreCase(nombre) && this.contraseña.equalsIgnoreCase(contraseña)) {
+            System.out.println("\n--------------------------------------");
+            System.out.println("Inicio de sesión exitoso");
+            System.out.println("--------------------------------------");
+            return true;
+        } else {
+            System.out.println("\n-------------------------------------");
+            System.out.println("Inicio de sesión fallido");
+            System.out.println("-------------------------------------");
+            return false;
+        }
     }
 
 }

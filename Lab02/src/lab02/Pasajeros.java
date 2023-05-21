@@ -9,8 +9,6 @@ public class Pasajeros {
     private String direccion;
     private String numeroPasaporte;
     private Compañia listavuelos;
-//    public Pasajeros(){
-//    }
     
     public Pasajeros(String nombre, String direccion, String numeroPasaporte, Compañia listavuelos) {
         this.nombre = nombre;
@@ -69,4 +67,19 @@ public class Pasajeros {
         }
         return vuelosencontrados;
     }
+    
+    public boolean login(String nombre, String numeroPasaporte) {
+        if (this.nombre.equalsIgnoreCase(nombre) && this.numeroPasaporte.equalsIgnoreCase(numeroPasaporte)) {
+            System.out.println("\n--------------------------------------");
+            System.out.println("Inicio de sesión exitoso");
+            System.out.println("--------------------------------------");
+            return true;
+        } else {
+            System.out.println("\n-------------------------------------");
+            System.out.println("Inicio de sesión fallido");
+            System.out.println("-------------------------------------");
+            return false;
+        }
+    }
+    
 }
