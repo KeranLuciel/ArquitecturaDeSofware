@@ -11,6 +11,14 @@ public class Lab02 {
 //        pasajero.buscarVuelos(scanner, lista);
         Inicio inicio = new Inicio();
         inicio.iniciarSistema();
+        
+        
+        //Agregar vuelos al Itinerarios
+        Itinerarios itinerarios = new Itinerarios();
+        Vuelos vuelo = new Vuelos();
+        vuelo.mostrarVuelo();
+        itinerarios.agregarVuelo(vuelo);
+        itinerarios.mostrarItinerario();
     }
     
 }

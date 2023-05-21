@@ -5,17 +5,27 @@ import java.util.List;
 
 public class Itinerarios {
   
-    private List<Vuelos> vuelos;
+    private List<Vuelos> vuelo;
     
     public Itinerarios() {
-        vuelos = new ArrayList<>();
+        vuelo = new ArrayList<>();
     }
     
-    public List<Vuelos> getVuelos() {
-        return vuelos;
+    public void agregarVuelo(Vuelos vuelos) {
+        vuelo.add(vuelos);
     }
     
-    public void setVuelos(List<Vuelos> vuelos) {
-        this.vuelos = vuelos;
+    public void eliminarVuelo(Vuelos vuelos) {
+        vuelo.remove(vuelos);
+    }
+    
+    public void mostrarItinerario() {
+        for (Vuelos vuelos : vuelo) {
+            System.out.println("Origen: " + vuelos.getOrigen());
+            System.out.println("Destino: " + vuelos.getDestino());
+            System.out.println("Fecha: " + vuelos.getFecha());
+            System.out.println("Asientos disponibles: " + vuelos.getAsientosDisponibles());
+            System.out.println("----------------------");
+        }
     }
 }
