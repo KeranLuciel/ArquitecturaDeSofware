@@ -6,9 +6,32 @@ import java.util.Scanner;
 public class Lab02 {
 
     public static void main(String[] args) {
-        
-        System.out.println("\n>>> BIENVENIDO A NUESTRO SISTEMA DE RESERVAS <<<");
         Scanner scanner = new Scanner (System.in);
+        class Ingreso(){
+            System.out.println("\n>>> BIENVENIDO A NUESTRO SISTEMA DE RESERVAS <<<");
+            System.out.println("Es usted ...?");
+            System.out.println("1. Pasajero");
+            System.out.println("2. Administrador");
+            int opc = scanner.nextInt();
+            switch (opc) {
+                case 1:
+                    System.out.println("");
+                    System.out.println("Que desea hacer?");
+                    System.out.println("1. Registrarte");
+                    System.out.println("2. Ingresar");
+                    break;
+                case 2:
+                    System.out.println("");
+                    System.out.println("Que desea hacer?");
+                    System.out.println("1. Registrarte");
+                    System.out.println("2. Ingresar");
+                    break;
+                default:
+                    throw new AssertionError();
+            }
+        }
+        
+        
         System.out.print("\nIngrese su nombre: ");
         String nombre = scanner.nextLine();
         System.out.print("Ingrese su direccion: ");
