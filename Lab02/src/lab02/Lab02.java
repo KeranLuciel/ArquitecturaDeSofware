@@ -5,12 +5,9 @@ import java.util.Scanner;
 
 public class Lab02 {
     
-    Scanner scanner = new Scanner (System.in);
-    Pasajeros pasajero = new Pasajeros();
-    Compañia compañia = new Compañia();
-
     public static void main(String[] args) {
         
+        Scanner scanner = new Scanner (System.in);
         System.out.print("\nIngrese su nombre: ");
         String nombre = scanner.nextLine();
         System.out.print("Ingrese su direccion: ");
@@ -40,10 +37,19 @@ public class Lab02 {
                 vuelo.mostrarVuelo();
             }
         }
+        Inicio inicio = new Inicio();
+        inicio.iniciarSistema();
     }
     
-    public class Inicio {
-        
+}
+
+class Inicio {
+    Scanner scanner = new Scanner(System.in);
+    Pasajeros pasajero;
+    Compañia compañia = new Compañia();
+    
+    public void iniciarSistema() {
+
         System.out.println("\n>>> BIENVENIDO A NUESTRO SISTEMA DE RESERVAS <<<");
         System.out.println("¿Quién es usted?");
         System.out.println("1. Pasajero");
@@ -60,11 +66,22 @@ public class Lab02 {
                 
                 switch (opcionPasajero) {
                     case 1:
+                        System.out.println("");
+                        System.out.print("Ingrese su nombre: ");
+                        String nombre = scanner.nextLine();
+                        System.out.print("Ingrese su dirección: ");
+                        String direccion = scanner.nextLine();
+                        System.out.print("Ingrese su número de pasaporte: ");
+                        String numeroPasaporte = scanner.nextLine();
                         pasajero.registrarPasajero(nombre, direccion, numeroPasaporte);
                         break;
                     case 2:
-                        
-                        pasajero.login(nombre, numeroPasaporte);
+                        System.out.println("");
+                        System.out.print("Ingrese su nombre: ");
+                        String nombreLogin = scanner.nextLine();
+                        System.out.print("Ingrese su número de pasaporte: ");
+                        String numeroPasaporteLogin = scanner.nextLine();
+                        pasajero.login(nombreLogin, numeroPasaporteLogin);
                         break;
                     default:
                         throw new AssertionError();
@@ -81,10 +98,20 @@ public class Lab02 {
                 
                 switch (opcionAdministrador) {
                     case 1:
-                        compañia.registrarAdmin(nombre, contraseña);
+                        System.out.println("");
+                        System.out.print("Ingrese su nombre: ");
+                        String nombreAdmin = scanner.nextLine();
+                        System.out.print("Ingrese su contraseña: ");
+                        String contraseñaAdmin = scanner.nextLine();
+                        compañia.registrarAdmin(nombreAdmin, contraseñaAdmin);
                         break;
                     case 2:
-                        compañia.login(nombre, contraseña)
+                        System.out.println("");
+                        System.out.print("Ingrese su nombre: ");
+                        String nombreAdminLogin = scanner.nextLine();
+                        System.out.print("Ingrese su contraseña: ");
+                        String contraseñaAdminLogin = scanner.nextLine();
+                        compañia.login(nombreAdminLogin, contraseñaAdminLogin);
                         break;
                     default:
                         throw new AssertionError();
@@ -96,6 +123,4 @@ public class Lab02 {
                 throw new AssertionError();
         }
     }
-    
 }
-    
