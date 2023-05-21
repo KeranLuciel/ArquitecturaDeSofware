@@ -9,15 +9,13 @@ public class Lab02 {
 
 //        Metodo para buscar vuelos disponibles
 //        pasajero.buscarVuelos(scanner, lista);
-        Inicio inicio = new Inicio();
-        inicio.iniciarSistema();
+        //Inicio inicio = new Inicio();
+        //inicio.iniciarSistema();
         
         
         //Agregar vuelos al Itinerarios
-        Itinerarios itinerarios = new Itinerarios();
-        Vuelos vuelo = new Vuelos();
-        itinerarios.agregarVuelo(vuelo);
-        itinerarios.mostrarItinerario();
+        Itinerarios instancia = new Itinerarios();
+        instancia.mostrarItinerario();
     }
     
 }

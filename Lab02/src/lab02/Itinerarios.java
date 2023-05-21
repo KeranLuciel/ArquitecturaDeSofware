@@ -1,25 +1,35 @@
 package lab02;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class Itinerarios {
-  
-    private List<Vuelos> vuelo;
+    private Pasajeros pasajero;
+    private Vuelos vuelo;
     
-    public Itinerarios() {
-        vuelo = new ArrayList<>();
+    public Itinerarios(Pasajeros pasajero, Vuelos vuelo){
+        this.pasajero = pasajero;
+        this.vuelo = vuelo;
     }
     
-    public void agregarVuelo(Vuelos vuelos) {
-        vuelo.add(vuelos);
+    /*public void modificarFecha(String nuevaFecha) {
+        vuelo.setFecha(nuevaFecha);
     }
     
-    public void eliminarVuelo(Vuelos vuelos) {
-        vuelo.remove(vuelos);
-    }
-    
+    public void modificarOrigenDestino(String nuevoOrigen, String nuevoDestino) {
+        vuelo.setOrigen(nuevoOrigen);
+        vuelo.setDestino(nuevoDestino);
+    }*/
+
     public void mostrarItinerario() {
+        System.out.println("Nombre del pasajero: " + pasajero.getNombre());
+        System.out.println("Fecha: " + vuelo.getFecha());
+        System.out.println("Origen: " + vuelo.getOrigen());
+        System.out.println("Destino: " + vuelo.getDestino());
+        System.out.println("----------------------");
+    }
+    
+    
+    
+    /*public void mostrarItinerario() {
         for (Vuelos vuelos : vuelo) {
             System.out.println("Origen: " + vuelos.getOrigen());
             System.out.println("Destino: " + vuelos.getDestino());
@@ -27,5 +37,5 @@ public class Itinerarios {
             System.out.println("Asientos disponibles: " + vuelos.getAsientosDisponibles());
             System.out.println("----------------------");
         }
-    }
+    }*/
 }
