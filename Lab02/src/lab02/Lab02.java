@@ -7,17 +7,13 @@ public class Lab02 {
     
     public static void main(String[] args) {
 
-//        Metodo para buscar vuelos disponibles
-//        pasajero.buscarVuelos(scanner, lista);
-        //Inicio inicio = new Inicio();
-        //inicio.iniciarSistema();
-        
-        
+        Inicio inicio = new Inicio();
+        inicio.iniciarSistema();
+
         //Agregar vuelos al Itinerarios
-        Itinerarios instancia = new Itinerarios();
-        instancia.mostrarItinerario();
+//        Itinerarios instancia = new Itinerarios();
+//        instancia.mostrarItinerario();
     }
-    
 }
 
 class Inicio {
@@ -28,14 +24,13 @@ class Inicio {
     public void iniciarSistema() {
         pasajero = new Pasajeros("", "", "", compañia);
         compañia = new Compañia("");
-
+        
         System.out.println("\n>>> BIENVENIDO A NUESTRO SISTEMA DE RESERVAS <<<");
         System.out.println("¿Quién es usted?");
         System.out.println("1. Pasajero");
         System.out.println("2. Administrador\n");
         int opc = scanner.nextInt();
         scanner.nextLine();
-        
         switch (opc) {
             case 1:
                 System.out.println("");
@@ -55,6 +50,7 @@ class Inicio {
                         System.out.print("Ingrese su número de pasaporte: ");
                         String numeroPasaporte = scanner.nextLine();
                         pasajero.registrarPasajero(nombre, direccion, numeroPasaporte);
+                        
                         break;
                     case 2:
                         System.out.println("");
@@ -63,11 +59,11 @@ class Inicio {
                         System.out.print("Ingrese su número de pasaporte: ");
                         String numeroPasaporteLogin = scanner.nextLine();
                         pasajero.login(nombreLogin, numeroPasaporteLogin);
+                        Pasajeros.buscarVuelos(scanner, compañia);
                         break;
                     default:
-                        throw new AssertionError();
+                        System.out.println("Error");
                 }
-                
                 break;
                 
             case 2:
@@ -96,13 +92,12 @@ class Inicio {
                         compañia.login(nombreAdminLogin, contraseñaAdminLogin);
                         break;
                     default:
-                        throw new AssertionError();
+                        System.out.println("Error");
                 }
-                
                 break;
                 
             default:
-                throw new AssertionError();
+                System.out.println("Error");
         }
     }
 }
