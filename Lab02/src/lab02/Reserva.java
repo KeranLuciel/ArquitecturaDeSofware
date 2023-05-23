@@ -38,4 +38,6 @@ public class Reserva {
         this.costoTotal = costoTotal;
     }
     
+    public void generarPago(){
+    }
 }

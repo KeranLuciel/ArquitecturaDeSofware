@@ -26,16 +26,5 @@ public class Itinerarios {
         System.out.println("Destino: " + vuelo.getDestino());
         System.out.println("----------------------");
     }
-    
-    
-    
-    /*public void mostrarItinerario() {
-        for (Vuelos vuelos : vuelo) {
-            System.out.println("Origen: " + vuelos.getOrigen());
-            System.out.println("Destino: " + vuelos.getDestino());
-            System.out.println("Fecha: " + vuelos.getFecha());
-            System.out.println("Asientos disponibles: " + vuelos.getAsientosDisponibles());
-            System.out.println("----------------------");
-        }
-    }*/
+
 }
