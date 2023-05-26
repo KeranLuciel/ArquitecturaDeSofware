@@ -45,4 +45,10 @@ public class Pieza {
     public void setCantidad(int cantidad){
         this.cantidad = cantidad;
     }
+    
+    @Override
+    public String toString(){
+        return "\nPieza: " + "\n- Nombre = " + nombre + "\n- Número de pieza = " + numeropieza +
+                "\n- Fabricante = " + fabricante + "\n- Cantidad = " + cantidad;
+    }
 }
