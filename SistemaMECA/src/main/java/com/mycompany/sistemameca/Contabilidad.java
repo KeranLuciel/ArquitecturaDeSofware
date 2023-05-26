@@ -1,4 +1,3 @@
-
 package com.mycompany.sistemameca;
 
 public class Contabilidad {
