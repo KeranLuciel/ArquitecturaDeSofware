@@ -3,11 +3,11 @@ package com.mycompany.sistemameca;
 public class Problema {
     
     private String fecha;
-    private String problema;
+    private String descripcionproblema;
     
-    public Problema(String fecha, String problema){
+    public Problema(String fecha, String descripcionproblema){
         this.fecha = fecha;
-        this.problema = problema;
+        this.descripcionproblema = descripcionproblema;
     }
     
     public String getFecha(){
@@ -19,16 +19,16 @@ public class Problema {
     }
     
     public String getProblema(){
-        return problema;
+        return descripcionproblema;
     } 
     
     public void setProblema(String problema){
-        this.problema = problema;
+        this.descripcionproblema = problema;
     }
     
     @Override
     public String toString(){
-        return "\nProblema: " + "\n- Fecha = " + fecha + "\n- Problema = " + problema;
+        return "\nProblema: " + "\n- Fecha = " + fecha + "\n- Problema = " + descripcionproblema;
     }
     
 }

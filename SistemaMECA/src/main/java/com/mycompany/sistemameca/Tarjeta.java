@@ -41,6 +41,19 @@ public class Tarjeta {
     
     @Override
     public String toString() {
-        return "\nTarjeta de Clientes-Servicio" + "\n" + cliente + "\n" + vehiculo + "\n" + listaproblema;
+//        return "\nTarjeta de Clientes-Servicio" + "\n" + cliente + "\n" + vehiculo + "\n" + listaproblema;
+        StringBuilder sb = new StringBuilder();
+        sb.append("\nTarjeta de Clientes-Servicio");
+        sb.append("\n");
+        sb.append(cliente.toString());
+        sb.append("\n");
+        sb.append(vehiculo.toString());
+        sb.append("\n");
+        for (Problema problema : listaproblema) {
+            sb.append(problema.toString());
+            sb.append("\n");
+        }
+        return sb.toString();
     }
+
 }
