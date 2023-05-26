@@ -1,15 +1,17 @@
 
 package com.mycompany.sistemameca;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Tarjeta {
+
     
     Cliente cliente;
     Vehiculo vehiculo;
     List<Problema> listaproblema;
     
-    public Tarjeta(){
+    public Tarjeta(Cliente cliente, Vehiculo vehiculo, List<Problema> listaproblema){
         this.cliente = cliente;
         this.vehiculo = vehiculo;
         this.listaproblema = listaproblema;
@@ -44,6 +46,15 @@ public class Tarjeta {
         Cliente nuevoCliente = new Cliente(codigo, nombre, apellidos, direccion);
         return nuevoCliente;
         
+    }
+    
+    public static Tarjeta crearTarjeta(int codigo, String nombre, String apellidos, String direccion, String modelo, String marca,
+        String color, String licencia, List<String> fecha, List<String> problema){
+        
+        Cliente cliente = new Cliente(codigo, nombre, apellidos, direccion);
+        Vehiculo vehiculo = new Vehiculo(modelo, marca, color, licencia);
+        List<Problema> problemas = new ArrayList<>();
+        return new Tarjeta(cliente, vehiculo, problemas);
     }
     
 }
