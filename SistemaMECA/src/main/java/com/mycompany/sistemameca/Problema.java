@@ -27,4 +27,9 @@ public class Problema {
         this.problema = problema;
     }
     
+    @Override
+    public String toString(){
+        return "\nProblema: " + "\n- Fecha = " + fecha + "\n- Problema = " + problema;
+    }
+    
 }

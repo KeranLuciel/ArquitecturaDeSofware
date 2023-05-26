@@ -21,5 +21,7 @@ public class SistemaMECA {
 //        Tarjeta tarjeta = new Tarjeta(cliente, vehiculo, problema);
 //        Cliente cliente = tarjeta.crearTarjetaCliente(8548, "Yolanda", "Flores", "Av. Peru 258");
         System.out.println(cliente.toString());
+        System.out.println(vehiculo.toString());
+        System.out.println(problemas.toString());
     }
 }
