@@ -6,7 +6,6 @@ import java.util.List;
 
 public class Tarjeta {
 
-    
     Cliente cliente;
     Vehiculo vehiculo;
     List<Problema> listaproblema;
@@ -41,21 +40,8 @@ public class Tarjeta {
         this.listaproblema = listaproblema;
     }
     
-    public Cliente crearTarjetaCliente(int codigo, String nombre, String apellidos, String direccion){
-        
-        Cliente nuevoCliente = new Cliente(codigo, nombre, apellidos, direccion);
-        return nuevoCliente;
-        
+    @Override
+    public String toString() {
+        return "\nTarjeta de Clientes-Servicio" + "\n" + cliente + "\n" + vehiculo + "\n" + listaproblema;
     }
-    
-    public static Tarjeta crearTarjeta(int codigo, String nombre, String apellidos, String direccion, String modelo, String marca,
-        String color, String licencia, List<String> fecha, List<String> problema){
-        
-        Cliente cliente = new Cliente(codigo, nombre, apellidos, direccion);
-        Vehiculo vehiculo = new Vehiculo(modelo, marca, color, licencia);
-        List<Problema> problemas = new ArrayList<>();
-        return new Tarjeta(cliente, vehiculo, problemas);
-    }
-    
-    
 }
