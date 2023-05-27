@@ -30,14 +30,24 @@ public class SistemaMECA {
         Reparacion reparacion = new Reparacion("15-10-2022", "Reemplazo del motor", cliente);
         
         List<Pieza> piezasNecesarias = new ArrayList<>();
-        Pieza pieza1 = new Pieza("Nombre1", 1, "Fabricante1", 2);
-        Pieza pieza2 = new Pieza("Nombre2", 2, "Fabricante2", 1);
+        Pieza pieza1 = new Pieza("Motor", 12345, "Fabricante1", 1);
+        Pieza pieza2 = new Pieza("Batería", 67890, "Fabricante2", 2);
         piezasNecesarias.add(pieza1);
         piezasNecesarias.add(pieza2);
         tarjeta.setPiezasNecesarias(piezasNecesarias);
         System.out.println(tarjeta.toStringWithPiezas());
         
-        Factura factura = new Factura(1234, "16-05-2023", tarjeta.getCliente());
-        System.out.println(factura.toString());
+        Contabilidad contabilidad = new Contabilidad(new ArrayList<>());
+        Factura factura1 = new Factura(1234, "16-05-2023", tarjeta.getCliente(),100.0, contabilidad);
+        Factura factura2 = new Factura(5678, "17-05-2023", cliente, 1500.0, contabilidad);
+        
+        System.out.println(factura1.toString());
+        System.out.println(factura2.toString());
+        
+        double montoTotal = contabilidad.calcularMontoTotal();
+        System.out.println("Monto total: " + montoTotal);
+        
+        String conta = contabilidad.Contabilidades((int) montoTotal);
+        System.out.println("\nListado brindado por Contabilidad:" + conta);
     }
 }

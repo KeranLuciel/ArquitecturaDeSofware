@@ -7,11 +7,12 @@ public class Factura {
     private Cliente cliente;
     private double monto;
     
-    public Factura(int numerofactura, String fecha, Cliente cliente){
+    Factura(int numerofactura, String fecha, Cliente cliente, double monto, Contabilidad contabilidad){
         this.numerofactura = numerofactura;
         this.fecha = fecha;
         this.cliente = cliente;
         this.monto = monto;
+        contabilidad.getFacturas().add(this);
     }
     
     public int getNumerofactura(){
