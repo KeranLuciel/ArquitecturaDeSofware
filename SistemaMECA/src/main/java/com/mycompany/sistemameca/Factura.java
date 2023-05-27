@@ -3,11 +3,13 @@ package com.mycompany.sistemameca;
 public class Factura {
     
     private int numerofactura;
-    private String fechafactura;
+    private String fecha;
+    private double monto;
     
     public Factura(int numerofactura, String fechafactura){
         this.numerofactura = numerofactura;
-        this.fechafactura = fechafactura;
+        this.fecha = fecha;
+        this.monto = monto;
     }
     
     public int getNumerofactura(){
@@ -18,11 +20,28 @@ public class Factura {
         this.numerofactura = numerofactura;
     }
     
-    public String getFechafactura(){
-        return fechafactura;
+    public String getFecha(){
+        return fecha;
     }
     
-    public void setFechafactura(String fechafactura){
-        this.fechafactura = fechafactura;
+    public void setFechafactura(String fecha){
+        this.fecha = fecha;
+    }
+    
+    public double getMonto(){
+        return monto;
+    }
+    
+    public void setMonto(double monto){
+        this.monto = monto;
+    }
+    
+    @Override
+    public String toString() {
+        return """
+               Factura: 
+               - N\u00famero de factura: """ + numerofactura +
+                "\n- Fecha: " + fecha +
+                "\n- Monto: " + monto;
     }
 }
