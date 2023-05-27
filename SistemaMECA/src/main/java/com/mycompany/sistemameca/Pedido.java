@@ -79,7 +79,6 @@ public class Pedido {
             sb.append(pieza.getNombre()).append(", ");
         }
         
-        // Eliminar la última coma y espacio
         if (!piezasDeseadas.isEmpty()) {
             sb.delete(sb.length() - 2, sb.length());
         }
