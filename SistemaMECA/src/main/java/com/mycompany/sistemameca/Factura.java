@@ -7,7 +7,7 @@ public class Factura {
     private Cliente cliente;
     private double monto;
     
-    public Factura(int numerofactura, String fechafactura, Cliente cliente){
+    public Factura(int numerofactura, String fecha, Cliente cliente){
         this.numerofactura = numerofactura;
         this.fecha = fecha;
         this.cliente = cliente;
@@ -48,11 +48,13 @@ public class Factura {
     
     @Override
     public String toString() {
-        return """
-               Factura: 
-               - N\u00famero de factura: """ + numerofactura +
-                "\n"+ cliente.toString()+
-                "\n- Fecha: " + fecha +
-                "\n- Monto: " + monto;
-    }
+    StringBuilder sb = new StringBuilder();
+    sb.append("Factura:");
+    sb.append(cliente.toString());
+    sb.append("\n- Número de factura: ").append(numerofactura);
+    sb.append("\n- Fecha: ").append(fecha);
+    sb.append("\n- Monto: ").append(monto);
+    return sb.toString();
+}
+
 }
