@@ -38,8 +38,8 @@ public class SistemaMECA {
         System.out.println(tarjeta.toStringWithPiezas());
         
         Contabilidad contabilidad = new Contabilidad(new ArrayList<>());
-        Factura factura1 = new Factura(1234, "16-05-2023", tarjeta.getCliente(),100.0, contabilidad);
-        Factura factura2 = new Factura(5678, "17-05-2023", cliente, 1500.0, contabilidad);
+        Factura factura1 = new Factura(1234, "16-11-2023", tarjeta.getCliente(),100.0, contabilidad);
+        Factura factura2 = new Factura(5678, "17-11-2023", cliente, 1500.0, contabilidad);
         
         System.out.println(factura1.toString());
         System.out.println(factura2.toString());
