@@ -37,6 +37,9 @@ public class SistemaMECA {
         tarjeta.setPiezasNecesarias(piezasNecesarias);
         System.out.println(tarjeta.toStringWithPiezas());
         
+        Pedido pedido = new Pedido(1, "14-10-2022", reparacion, piezasNecesarias);
+        System.out.println(pedido.toString());
+        
         Contabilidad contabilidad = new Contabilidad(new ArrayList<>());
         Factura factura1 = new Factura(1234, "02-11-2022", tarjeta.getCliente(),100.0, contabilidad);
         Factura factura2 = new Factura(5678, "03-11-2022", cliente, 1500.0, contabilidad);
@@ -45,7 +48,7 @@ public class SistemaMECA {
         System.out.println(factura2.toString());
         
         double montoTotal = contabilidad.calcularMontoTotal();
-        System.out.println("Monto total: " + montoTotal);
+        System.out.println("\nMonto total: " + montoTotal);
         
         String conta = contabilidad.Contabilidades((int) montoTotal);
         System.out.println("\nListado brindado por Contabilidad:" + conta);

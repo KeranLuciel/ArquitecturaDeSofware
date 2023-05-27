@@ -39,6 +39,6 @@ public class Reparacion {
     @Override
     public String toString(){
         return "\nReparación: " + "\n- Fecha = " + fecha + "\n- Descripción = " + descripcion +
-                "\n- Cliente = " + cliente.toString();
+                cliente.toString();
     }
 }

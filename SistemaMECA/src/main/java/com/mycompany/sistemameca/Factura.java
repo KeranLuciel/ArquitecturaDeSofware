@@ -50,7 +50,7 @@ public class Factura {
     @Override
     public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("Factura:");
+    sb.append("\nFactura:");
     sb.append(cliente.toString());
     sb.append("\n- Número de factura: ").append(numerofactura);
     sb.append("\n- Fecha: ").append(fecha);

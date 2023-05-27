@@ -1,3 +1,4 @@
+//
 package com.mycompany.sistemameca;
 
 import java.util.List;
@@ -6,18 +7,14 @@ public class Pedido {
     
     private int numeropedido;
     private String fechapedido;
-    private Cliente cliente;
-    private Vehiculo vehiculo;
-    private Problema problema;
-    private List<Pieza> piezasDeseadas;
+    private Reparacion reparacion;
+    private List<Pieza> piezasNecesarias;
     
-    public Pedido(int numeropedido, String fechapedido, Cliente cliente, Vehiculo vehiculo, Problema problema, List<Pieza> piezasDeseadas) {
+    public Pedido(int numeropedido, String fechapedido, Reparacion reparacion, List<Pieza> piezasNecesarias) {
         this.numeropedido = numeropedido;
         this.fechapedido = fechapedido;
-        this.cliente = cliente;
-        this.vehiculo = vehiculo;
-        this.problema = problema;
-        this.piezasDeseadas = piezasDeseadas;
+        this.reparacion = reparacion;
+        this.piezasNecesarias = piezasNecesarias;
     }
     
     public int getNumeropedido(){
@@ -36,53 +33,31 @@ public class Pedido {
         this.fechapedido = fechapedido;
     }
     
-    public Cliente getCliente() {
-        return cliente;
+    public Reparacion getReparacion() {
+        return reparacion;
     }
 
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
+    public void setReparacion(Reparacion reparacion) {
+        this.reparacion = reparacion;
+    }
+    
+    public List<Pieza> getPiezasNecesarias() {
+        return piezasNecesarias;
     }
 
-    public Vehiculo getVehiculo() {
-        return vehiculo;
-    }
-
-    public void setVehiculo(Vehiculo vehiculo) {
-        this.vehiculo = vehiculo;
-    }
-
-    public Problema getProblema() {
-        return problema;
-    }
-
-    public void setProblema(Problema problema) {
-        this.problema = problema;
-    }
-
-    public List<Pieza> getPiezasDeseadas() {
-        return piezasDeseadas;
-    }
-
-    public void setPiezasDeseadas(List<Pieza> piezasDeseadas) {
-        this.piezasDeseadas = piezasDeseadas;
+    public void setPiezasNecesarias(List<Pieza> piezasNecesarias) {
+        this.piezasNecesarias = piezasNecesarias;
     }
     
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("El pedido del cliente ").append(cliente.getNombre()).append(" de vehiculo ").append(vehiculo.getModelo())
-            .append(" ").append(vehiculo.getMarca()).append(", quiere ").append(problema.getProblema())
-            .append(" y se desea que se cambien las siguientes piezas: ");
-        
-        for (Pieza pieza : piezasDeseadas) {
-            sb.append(pieza.getNombre()).append(", ");
-        }
-        
-        if (!piezasDeseadas.isEmpty()) {
-            sb.delete(sb.length() - 2, sb.length());
-        }
+        sb.append("El pedido número ").append(numeropedido)
+            .append(" con fecha ").append(fechapedido)
+            .append(" requiere la reparación: \n").append(reparacion.toString())
+            .append(" y las siguientes piezas necesarias: ");
         
         return sb.toString();
     }
 }
+

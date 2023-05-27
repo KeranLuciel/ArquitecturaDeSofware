@@ -31,30 +31,6 @@ public class Contabilidad {
                 "\n Ganancias: " + montoTotal/3;
     }
     
-//    public int getIngresos(){
-//        return ingresos;
-//    }
-//    
-//    public void setIngresos(int ingresos){
-//        this.ingresos = ingresos;
-//    }
-//    
-//    public int getEgresos(){
-//        return egresos;
-//    }
-//    
-//    public void setEgresos(int egresos){
-//        this.egresos = egresos;
-//    }
-//    
-//    public int getGanancias(){
-//        return ganancias;
-//    }
-//    
-//    public void setGanancias(int ganancias){
-//        this.ganancias = ganancias;
-//    }
-    
     public List<Factura> getFacturas() {
         return facturas;
     }
