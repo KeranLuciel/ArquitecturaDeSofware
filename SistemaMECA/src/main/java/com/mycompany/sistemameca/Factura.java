@@ -4,11 +4,13 @@ public class Factura {
     
     private int numerofactura;
     private String fecha;
+    private Cliente cliente;
     private double monto;
     
-    public Factura(int numerofactura, String fechafactura){
+    public Factura(int numerofactura, String fechafactura, Cliente cliente){
         this.numerofactura = numerofactura;
         this.fecha = fecha;
+        this.cliente = cliente;
         this.monto = monto;
     }
     
@@ -36,11 +38,20 @@ public class Factura {
         this.monto = monto;
     }
     
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+    
     @Override
     public String toString() {
         return """
                Factura: 
                - N\u00famero de factura: """ + numerofactura +
+                "\n"+ cliente.toString()+
                 "\n- Fecha: " + fecha +
                 "\n- Monto: " + monto;
     }

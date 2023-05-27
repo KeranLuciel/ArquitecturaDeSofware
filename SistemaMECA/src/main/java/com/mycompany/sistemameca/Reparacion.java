@@ -28,8 +28,12 @@ public class Reparacion {
         this.descripcion = descripcion;
     }
     
-    public Cliente getCliente(){
+    public Cliente getCliente() {
         return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
     
     @Override
