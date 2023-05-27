@@ -54,8 +54,7 @@ public class Pedido {
         StringBuilder sb = new StringBuilder();
         sb.append("El pedido número ").append(numeropedido)
             .append(" con fecha ").append(fechapedido)
-            .append(" requiere la reparación: \n").append(reparacion.toString())
-            .append(" y las siguientes piezas necesarias: ");
+            .append(" requiere la reparación: \n").append(reparacion.toString());
         
         return sb.toString();
     }

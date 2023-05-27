@@ -49,13 +49,13 @@ public class SistemaMECA {
         
         System.out.println(factura1.toString());
         System.out.println(factura2.toString());
-        System.out.println("---------------------------------------------------------");
+        System.out.println("\n---------------------------------------------------------");
         
         double montoTotal = contabilidad.calcularMontoTotal();
-        System.out.println("\nMonto total: " + montoTotal);
+        System.out.println("Monto total: " + montoTotal);
         System.out.println("---------------------------------------------------------");
         String conta = contabilidad.Contabilidades((int) montoTotal);
         System.out.println("\nListado brindado por Contabilidad:" + conta);
-        System.out.println("---------------------------------------------------------");
+        System.out.println("\n---------------------------------------------------------");
     }
 }
