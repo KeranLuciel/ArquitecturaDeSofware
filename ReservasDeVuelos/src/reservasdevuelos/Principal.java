@@ -1,8 +1,7 @@
-
 package reservasdevuelos;
 
 public interface Principal {
     
     void iniciarSesion();
-    void registar();
+    void registrar();
 }

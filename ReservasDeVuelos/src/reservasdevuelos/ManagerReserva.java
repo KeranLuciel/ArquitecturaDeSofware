@@ -3,7 +3,7 @@ package reservasdevuelos;
 
 public class ManagerReserva {
     
-    public void obtenerReserva (Usuario usuario){}
+    public void obtenerReserva (){}
     
     public void cambiarAsiento(){}
     

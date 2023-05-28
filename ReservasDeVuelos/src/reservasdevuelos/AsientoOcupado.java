@@ -1,14 +1,15 @@
 package reservasdevuelos;
 
-public class GestorUsuario implements Principal{
+public class AsientoOcupado extends Asiento{
 
     @Override
-    public void iniciarSesion() {
+    public void asignarAsiento() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public void registrar() {
+    public void mostrarAsientosDisponibles() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+    
 }
