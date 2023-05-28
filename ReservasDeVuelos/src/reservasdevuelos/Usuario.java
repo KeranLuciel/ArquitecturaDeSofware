@@ -5,13 +5,13 @@ public class Usuario {
     
     private String nombre;
     private String apellido;
-    private String usuario;
+    private String nombreusuario;
     private String contraseña;
     
-    public Usuario(String nombre, String apellido, String usuario, String contraseña){
+    public Usuario(String nombre, String apellido, String nombreusuario, String contraseña){
         this.nombre = nombre;
         this.apellido = apellido;
-        this.usuario = usuario;
+        this.nombreusuario = nombreusuario;
         this.contraseña = contraseña;
     }
     
@@ -31,12 +31,12 @@ public class Usuario {
         this.apellido = apellido;
     }
     
-    public String getUsuario() {
-        return usuario;
+    public String getNombreusuario() {
+        return nombreusuario;
     }
     
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
+    public void setNombreusuario(String nombreusuario) {
+        this.nombreusuario = nombreusuario;
     }
     
     public String getContraseña() {
