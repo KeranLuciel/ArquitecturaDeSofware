@@ -16,13 +16,13 @@ public class GestorUsuario implements Principal{
     public void registrar() {
         
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Ingrese su nombre: ");
+        System.out.print("Ingrese su nombre: ");
         String nombre = scanner.nextLine();
-        System.out.println("Ingrese su apellido: ");
+        System.out.print("Ingrese su apellido: ");
         String apellido = scanner.nextLine();
-        System.out.println("Ingrese un nombre de usuario: ");
+        System.out.print("Ingrese un nombre de usuario: ");
         String nombreUsuario = scanner.nextLine();
-        System.out.println("Ingrese una contraseña: ");
+        System.out.print("Ingrese una contraseña: ");
         String contraseña = scanner.nextLine();
         
         if (buscarUsuario(nombreUsuario) != null) {
@@ -35,6 +35,7 @@ public class GestorUsuario implements Principal{
             System.out.println("Registro exitoso.");
             
         }
+
     }
     
     @Override
@@ -59,7 +60,7 @@ public class GestorUsuario implements Principal{
     
     private Usuario buscarUsuario(String nombreUsuario) {
         for (Usuario usuario : usuarios) {
-            if (usuario.getNombreusuario().equals(nombreUsuario)) {
+            if (usuario.getNombreUsuario().equals(nombreUsuario)) {
                 return usuario;
             }
         }
