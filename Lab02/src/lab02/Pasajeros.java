@@ -18,10 +18,6 @@ public class Pasajeros {
         this.listavuelos = listavuelos;
     }
 
-    Pasajeros(String juan, String aa, String ss) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
     public String getNombre() {
         return nombre;
     }
