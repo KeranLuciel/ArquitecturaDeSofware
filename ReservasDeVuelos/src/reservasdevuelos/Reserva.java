@@ -55,15 +55,25 @@ public class Reserva {
     }
 
 //    public boolean verificarAsientos() {
-//        // Lógica para verificar si los asientos están disponibles en el vuelo
-//        // Puedes implementar tu propia lógica aquí según tus necesidades
-//        return vuelo.verificarAsientoDisponible(asiento);
+//        
+//        boolean asientoDisponible = vuelo.verificarAsientoDisponible(asiento);
+//        if (asientoDisponible) {
+//            System.out.println("El asiento está disponible.");
+//        } else {
+//            System.out.println("El asiento seleccionado no está disponible.");
+//        }
+//        return asientoDisponible;
 //    }
 //
 //    public boolean validarReserva() {
-//        // Lógica para validar la reserva
-//        // Puedes implementar tu propia lógica aquí según tus necesidades
-//        return verificarAsientos();
+//        
+//        boolean asientoValido = verificarAsientos();
+//        if (asientoValido) {
+//            System.out.println("La reserva es válida.");
+//        } else {
+//            System.out.println("La reserva no es válida debido a la falta de disponibilidad de asientos.");
+//        }
+//        return asientoValido;
 //    }
 }
 
