@@ -46,5 +46,13 @@ public class ListaVuelos {
         return vuelosencontrados;
     }
     
-    public void obtenerVuelos(){}
+    public void obtenerVuelos(){
+        System.out.println("-----------------------");
+        for (Vuelos vuelo : listavuelos){
+        System.out.println("Origen: " + vuelo.getOrigen());
+        System.out.println("Destino: " + vuelo.getDestino());
+        System.out.println("Fecha: " + vuelo.getFecha());
+        System.out.println("Numero Pasajeros: " + vuelo.getNumeroPasajeros());
+        }
+    }
 }
