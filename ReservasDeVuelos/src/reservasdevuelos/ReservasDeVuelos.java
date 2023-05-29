@@ -12,14 +12,14 @@ public class ReservasDeVuelos {
         Scanner scanner = new Scanner(System.in);
         boolean volverMenu = true;
         ListaVuelos listaVuelos = new ListaVuelos();
-        
+        GestorUsuario gestorusuario = new GestorUsuario();
         do {
             System.out.println("\n>>> BIENVENIDO A NUESTRO SISTEMA DE RESERVAS <<<");
             System.out.println("¿Qué desea hacer?");
             System.out.println("1. Registrarse");
             System.out.println("2. Ingresar");
             System.out.println("3. Salir");
-            GestorUsuario gestorusuario = new GestorUsuario();
+            
             int op = scanner.nextInt();
             switch (op){
                 case 1:
