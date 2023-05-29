@@ -2,13 +2,19 @@ package reservasdevuelos;
 
 public class AsientoDisponible extends Asiento{
     
+    private int numeroAsiento;
+    
+    public AsientoDisponible(int numeroAsiento) {
+        this.numeroAsiento = numeroAsiento;
+    }
+    
     @Override
     public void asignarAsiento() {
-        // Lógica para asignar asiento disponible
+        System.out.println("El asiento " + numeroAsiento + " asignando asiento disponible...");
     }
     
     @Override
     public void mostrarAsientosDisponibles() {
-        // Lógica para mostrar asientos disponibles
+        System.out.println("El asiento " + numeroAsiento + " mostrando asientos disponibles...");
     }
 }

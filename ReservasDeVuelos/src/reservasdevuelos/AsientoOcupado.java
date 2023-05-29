@@ -2,14 +2,20 @@ package reservasdevuelos;
 
 public class AsientoOcupado extends Asiento{
 
+    private int numeroAsiento;
+    
+    public AsientoOcupado(int numeroAsiento) {
+        this.numeroAsiento = numeroAsiento;
+    }
+    
     @Override
     public void asignarAsiento() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        System.out.println("El asiento " + numeroAsiento + " ya está ocupado.");
     }
 
     @Override
     public void mostrarAsientosDisponibles() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        System.out.println("El asiento " + numeroAsiento + " está ocupado.");
     }
     
 }
