@@ -1,4 +1,3 @@
-
 package reservasdevuelos;
 
 public class Vuelos {
@@ -46,5 +45,4 @@ public class Vuelos {
     public void setNumeroPasajeros(int numeropasajeros) {
         this.numeropasajeros = numeropasajeros;
     }
-    
 }

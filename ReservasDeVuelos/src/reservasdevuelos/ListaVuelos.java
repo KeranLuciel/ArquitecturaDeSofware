@@ -1,4 +1,3 @@
-
 package reservasdevuelos;
 
 import java.util.ArrayList;
@@ -31,6 +30,10 @@ public class ListaVuelos {
     
     public void agregarVuelos(Vuelos vuelos){
         listavuelos.add(vuelos);
+    }
+    
+    public void quitarVuelo(Vuelos vuelos) {
+        listavuelos.remove(vuelos);
     }
     
     public List<Vuelos> buscarVuelos(String origen, String destino, String fecha, int numeropasajeros){
