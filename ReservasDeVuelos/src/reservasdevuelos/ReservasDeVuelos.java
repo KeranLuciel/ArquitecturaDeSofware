@@ -42,7 +42,6 @@ public class ReservasDeVuelos {
 
                             switch (opcionUsuario) {
                                 case 1:
-                                    
                                     System.out.println("\n=== Busqueda de Vuelos ===");
                                     System.out.print("Ingrese el origen de vuelo: " );
                                     String origen = scanner.nextLine();
@@ -63,9 +62,11 @@ public class ReservasDeVuelos {
                                             listaVuelos.obtenerVuelos();
                                         }
                                     }
+                                    listaVuelos.obtenerVuelos();
                                     break;
                                     
                                 case 2:
+                                     
 //                                    System.out.println("Ingrese el número de vuelo para realizar la reserva: ");
 //                                    int numeroVuelo = scanner.nextInt();
 //                                    scanner.nextLine();
