@@ -3,7 +3,7 @@ package reservasdevuelos;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListaVuelos {
+public final class ListaVuelos {
     
     private List<Vuelos> listavuelos;
     

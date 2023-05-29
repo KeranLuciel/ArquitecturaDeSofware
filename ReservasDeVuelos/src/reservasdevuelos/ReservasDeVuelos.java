@@ -1,5 +1,6 @@
 package reservasdevuelos;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class ReservasDeVuelos {
@@ -13,6 +14,7 @@ public class ReservasDeVuelos {
         boolean volverMenu = true;
         ListaVuelos listaVuelos = new ListaVuelos();
         GestorUsuario gestorusuario = new GestorUsuario();
+        
         do {
             System.out.println("\n>>> BIENVENIDO A NUESTRO SISTEMA DE RESERVAS <<<");
             System.out.println("¿Qué desea hacer?");
@@ -40,8 +42,29 @@ public class ReservasDeVuelos {
 
                             switch (opcionUsuario) {
                                 case 1:
-                                    listaVuelos.obtenerVuelos();
+                                    
+                                    System.out.println("\n=== Busqueda de Vuelos ===");
+                                    System.out.print("Ingrese el origen de vuelo: " );
+                                    String origen = scanner.nextLine();
+                                    scanner.nextLine();
+                                    System.out.print("Ingrese el destino de vuelo: " );
+                                    String destino = scanner.nextLine();
+                                    System.out.print("Ingrese la fecha (dd-mm-yy): " );
+                                    String fecha = scanner.nextLine();
+                                    System.out.print("Ingrese el numero de pasajeros: " );
+                                    int numeropasajeros = scanner.nextInt();
+                                    List<Vuelos> vuelosencontrados = listaVuelos.buscarVuelos(origen, destino, fecha, numeropasajeros);
+                                    if (vuelosencontrados.isEmpty()) {
+                                        System.out.println("\n-----------------------");
+                                        System.out.println("No se encontro el vuelo");
+                                        System.out.println("-----------------------");
+                                    } else {
+                                        for (Vuelos vuelo : vuelosencontrados) {
+                                            listaVuelos.obtenerVuelos();
+                                        }
+                                    }
                                     break;
+                                    
                                 case 2:
 //                                    System.out.println("Ingrese el número de vuelo para realizar la reserva: ");
 //                                    int numeroVuelo = scanner.nextInt();

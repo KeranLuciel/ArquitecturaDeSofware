@@ -1,11 +1,16 @@
 package reservasdevuelos;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
 public class Vuelos {
     
     private String origen;
     private String destino;
     private String fecha;
     private int numeropasajeros;
+    private ListaVuelos listavuelos;
     
     public Vuelos(String origen, String destino, String fecha, int numeropasajeros) {
         this.origen = origen;
@@ -45,4 +50,5 @@ public class Vuelos {
     public void setNumeroPasajeros(int numeropasajeros) {
         this.numeropasajeros = numeropasajeros;
     }
+    
 }
