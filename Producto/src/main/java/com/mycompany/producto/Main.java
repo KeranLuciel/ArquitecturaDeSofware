@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        RegistrarUsuario registrarUsuario = new RegistrarUsuario();
-        IniciarSesion iniciarSesion = new IniciarSesion();
+        RegistroUsuario registrarUsuario = new RegistroUsuario();
+        InicioSesion iniciarSesion = new InicioSesion();
 
         int opcion = 0;
 
