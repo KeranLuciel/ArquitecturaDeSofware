@@ -5,12 +5,13 @@
 package com.mycompany.producto;
 
 public class RegistroUsuario {
+    
     public void accederRegistro() {
-        System.out.println("Accediendo al registro de usuario...");
+        System.out.println("\nAccediendo al registro de usuario...");
     }
 
     public Usuario ingresarDatos(String contraseña, DatosPersonales datosPersonales) {
-        System.out.println("Ingresando datos del usuario...");
+        System.out.println("\nIngresando datos del usuario...");
         Usuario usuario = new Usuario(null, contraseña, datosPersonales);
         crearCuentaBancaria(usuario);
         return usuario;
@@ -33,11 +34,13 @@ public class RegistroUsuario {
     }
 
     private void crearCuentaBancaria(Usuario usuario) {
-        System.out.println("Creando cuenta bancaria para el usuario...");
+        System.out.println("\nCreando cuenta bancaria para el usuario...");
         String cuentaBancaria = generarNumeroCuenta();
         usuario.setCuentaBancaria(cuentaBancaria);
         CuentaBancaria cuenta = new CuentaBancaria(cuentaBancaria, 0.0);
-        System.out.println("Cuenta bancaria creada: " + cuentaBancaria);
+        System.out.println("------------------------------------------");
+        System.out.println("  Cuenta bancaria creada: " + cuentaBancaria);
+        System.out.println("------------------------------------------");
     }
 
     private String generarNumeroCuenta(){

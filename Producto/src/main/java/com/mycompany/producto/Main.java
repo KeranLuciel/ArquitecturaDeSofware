@@ -12,7 +12,7 @@ public class Main {
         int opcion = 0;
 
         do {
-            System.out.println("Seleccione una opción:");
+            System.out.println("\nSeleccione una opción:");
             System.out.println("1. Registrar usuario");
             System.out.println("2. Iniciar sesión");
             System.out.println("3. Cancelar");
@@ -23,20 +23,21 @@ public class Main {
             switch (opcion) {
                 case 1:
                     registrarUsuario.accederRegistro();
-                    System.out.println("Ingrese la contraseña:");
+                    System.out.print("\nIngrese la contraseña: ");
                     String contraseña = scanner.nextLine();
-                    System.out.println("Ingrese los datos personales:");
-                    System.out.println("Nombre:");
+                    System.out.println("Ingrese los datos personales: ");
+                    System.out.print("- Nombre: ");
                     String nombre = scanner.nextLine();
-                    System.out.println("Apellido:");
+                    System.out.print("- Apellido: ");
                     String apellido = scanner.nextLine();
-                    System.out.println("DNI:");
+                    System.out.print("- DNI: ");
                     int dni = scanner.nextInt();
                     scanner.nextLine(); // Limpiar el buffer del scanner
 
                     DatosPersonales datosPersonales = new DatosPersonales(nombre, apellido, dni);
                     Usuario usuario = registrarUsuario.ingresarDatos(contraseña, datosPersonales);
                     break;
+                    
                 case 2:
                     iniciarSesion.accederLogin();
                     System.out.println("Ingrese la contraseña:");
