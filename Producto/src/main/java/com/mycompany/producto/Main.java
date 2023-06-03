@@ -56,11 +56,32 @@ public class Main {
                         scanner.nextLine();
                         
                         switch (opcion){
+                            
                             case 1:
-                                System.out.println("\n--- Ventana Transacción ---");
-                                System.out.println("1. Consultar saldo");
-                                System.out.println("2. Retirar dinero");
-                                System.out.println("3. Abonar dinero");
+                                boolean VentanaTransaccion = true;
+                                do{
+                                    System.out.println("\n--- Ventana Transacción ---");
+                                    System.out.println("1. Consultar saldo");
+                                    System.out.println("2. Retirar dinero");
+                                    System.out.println("3. Abonar dinero");
+                                    System.out.println("4. Atras");
+
+                                    opcion = scanner.nextInt();
+                                    scanner.nextLine();
+
+                                    switch (opcion){
+
+                                        case 1:
+                                            break;
+                                        case 2:
+                                            break;
+                                        case 3:
+                                            break;
+                                        case 4:
+                                            VentanaTransaccion = false;
+                                            break;
+                                    }
+                                } while(VentanaTransaccion);
                                 break;
                                 
                             case 2:
