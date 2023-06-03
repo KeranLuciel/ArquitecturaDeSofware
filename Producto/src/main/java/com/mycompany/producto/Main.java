@@ -8,7 +8,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         RegistroUsuario registrarUsuario = new RegistroUsuario();
         InicioSesion iniciarSesion = new InicioSesion();
-
+        
         int opcion = 0;
 
         do {
@@ -40,17 +40,20 @@ public class Main {
                     
                 case 2:
                     iniciarSesion.accederLogin();
-                    System.out.println("Ingrese la contraseña:");
-                    String contraseñaIngresada = scanner.nextLine();
                     System.out.println("Ingrese la cuenta bancaria:");
                     String cuentaBancaria = scanner.nextLine();
+                    System.out.println("Ingrese la contraseña:");
+                    String contraseñaIngresada = scanner.nextLine();
+                    
                     iniciarSesion.verificarCuentaBancaria(cuentaBancaria);
                     
+                    Usuario usuarioa = new Usuario(cuentaBancaria, contraseñaIngresada, null);
                     boolean MenuPrincipal = true;
                     do{
                         System.out.println("\n--- MENÚ PRINCIPAL ---");
                         System.out.println("1. Realizar transaccion");
-                        System.out.println("2. Cerrar sesión");
+                        System.out.println("2. Imprimir comprobante");
+                        System.out.println("3. Cerrar sesión");
                         
                         opcion = scanner.nextInt();
                         scanner.nextLine();
@@ -74,6 +77,12 @@ public class Main {
                                         case 1:
                                             break;
                                         case 2:
+                                            
+                                            System.out.println("Ingrese el monto a retirar: ");
+                                            double monto = scanner.nextDouble();
+//                                            CuentaBancaria cuenta = new CuentaBancaria(cuentaBancaria, 1000);
+//                                            RetirarDinero retirar = new RetirarDinero(usuarioa.getCuentaBancaria(), monto);
+//                                            retirar.ejecutar();
                                             break;
                                         case 3:
                                             break;
@@ -85,6 +94,10 @@ public class Main {
                                 break;
                                 
                             case 2:
+                                
+                                break;
+                            
+                            case 3: 
                                 System.out.println("Cerrando sesión...");
                                 MenuPrincipal = false;
                                 break;

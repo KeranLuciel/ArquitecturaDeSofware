@@ -8,6 +8,11 @@ package com.mycompany.producto;
  *
  * @author yflor
  */
-public class ConsultarSaldo {
+public class ConsultarSaldo implements ITransaccion{
+
+    @Override
+    public void ejecutar() {
+      
+    }
     
 }

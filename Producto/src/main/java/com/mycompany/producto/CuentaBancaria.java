@@ -19,8 +19,12 @@ public class CuentaBancaria {
     }
     
     public void retirar(double monto){
-        this.saldo = saldo - monto;
-        System.out.println("Retiro del monto " + monto + " realizado con éxito");
+        if (monto <= saldo){
+            this.saldo = saldo - monto;
+            System.out.println("Retiro del monto " + monto + " realizado con éxito");
+        }else{
+            System.out.println("Saldo insuficiente");
+        }
     }
     
     public void abonar(double monto){
