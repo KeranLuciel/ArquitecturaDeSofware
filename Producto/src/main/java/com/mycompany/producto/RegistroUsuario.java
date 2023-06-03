@@ -40,13 +40,13 @@ public class RegistroUsuario {
         System.out.println("Cuenta bancaria creada: " + cuentaBancaria);
     }
 
-    private String generarNumeroCuenta() {
+    private String generarNumeroCuenta(){
         StringBuilder numeroCuenta = new StringBuilder();
-        for (int i = 0; i < 10; i++) {
-            int digito = (int) (Math.random() * 10);
+        for (int i=0; i<10; i++){
+            int digito = (int)(Math.random()*10);
             numeroCuenta.append(digito);
         }
         return numeroCuenta.toString();
-    }
+    }
 }
 

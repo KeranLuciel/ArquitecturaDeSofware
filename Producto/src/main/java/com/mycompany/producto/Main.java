@@ -52,6 +52,6 @@ public class Main {
                     System.out.println("Opción inválida. Por favor, seleccione una opción válida.");
                     break;
             }
-        } while (opcion != 3);
+        } while (opcion != 3);
     }
 }
