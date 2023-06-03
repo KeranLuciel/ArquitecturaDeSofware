@@ -12,6 +12,8 @@ public class RegistroUsuario {
 
     public Usuario ingresarDatos(String contraseña, DatosPersonales datosPersonales) {
         System.out.println("\nIngresando datos del usuario...");
+        
+        
         Usuario usuario = new Usuario(null, contraseña, datosPersonales);
         crearCuentaBancaria(usuario);
         return usuario;

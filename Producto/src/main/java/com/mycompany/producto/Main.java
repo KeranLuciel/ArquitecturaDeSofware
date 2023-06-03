@@ -45,10 +45,41 @@ public class Main {
                     System.out.println("Ingrese la cuenta bancaria:");
                     String cuentaBancaria = scanner.nextLine();
                     iniciarSesion.verificarCuentaBancaria(cuentaBancaria);
+                    
+                    boolean MenuPrincipal = true;
+                    do{
+                        System.out.println("\n--- MENÚ PRINCIPAL ---");
+                        System.out.println("1. Realizar transaccion");
+                        System.out.println("2. Cerrar sesión");
+                        
+                        opcion = scanner.nextInt();
+                        scanner.nextLine();
+                        
+                        switch (opcion){
+                            case 1:
+                                System.out.println("\n--- Ventana Transacción ---");
+                                System.out.println("1. Consultar saldo");
+                                System.out.println("2. Retirar dinero");
+                                System.out.println("3. Abonar dinero");
+                                break;
+                                
+                            case 2:
+                                System.out.println("Cerrando sesión...");
+                                MenuPrincipal = false;
+                                break;
+                                
+                            default:
+                                System.out.println("Opción inválida. Por favor, seleccione una opción válida.");
+                                break;
+                        }
+                        
+                    } while (MenuPrincipal);
                     break;
+                
                 case 3:
                     System.out.println("Cancelando...");
                     break;
+                
                 default:
                     System.out.println("Opción inválida. Por favor, seleccione una opción válida.");
                     break;

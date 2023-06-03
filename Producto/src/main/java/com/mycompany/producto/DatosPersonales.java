@@ -41,5 +41,8 @@ public class DatosPersonales {
 
     public void obtenerDatos() {
         System.out.println("Obteniendo datos personales...");
+        System.out.println("- Nombre: " + nombre);
+        System.out.println("- Apellidos: " + apellido);
+        System.out.println("- DNI: " + dni);
     }
 }
