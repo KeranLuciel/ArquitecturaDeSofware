@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Main {
     
     public static void main(String[] args) {
-        
         Scanner scanner = new Scanner(System.in);
         RegistroUsuario registrarUsuario = new RegistroUsuario();
         InicioSesion iniciarSesion = new InicioSesion();
@@ -37,7 +36,6 @@ public class Main {
 
                     DatosPersonales datosPersonales = new DatosPersonales(nombre, apellido, dni);
                     Usuario usuario = registrarUsuario.ingresarDatos(contraseña, datosPersonales);
-                    System.out.println("Cuenta bancaria creada: " + usuario.getCuentaBancaria());
                     break;
                 case 2:
                     iniciarSesion.accederLogin();
@@ -54,6 +52,6 @@ public class Main {
                     System.out.println("Opción inválida. Por favor, seleccione una opción válida.");
                     break;
             }
-        } while (opcion != 3);
+        } while (opcion != 3);
     }
 }

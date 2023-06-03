@@ -47,6 +47,6 @@ public class RegistroUsuario {
             numeroCuenta.append(digito);
         }
         return numeroCuenta.toString();
-    }
+    }
 }
 
